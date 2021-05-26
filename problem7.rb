@@ -9,15 +9,9 @@ count=3
 while count<=10001
     number+=2
     simpleNuber=true
-    for i in simple
-        if number<i**2 #числа кратные i, начинают высчитывать с i(квадрат)
-            break
-        else 
-            if number%i==0
-                simpleNuber=false
-                break
-            end    
-        end        
+    simple.each do |i|
+        break if number<i**2 #числа кратные i, начинают высчитывать с i(квадрат)   
+        simpleNuber=false if number%i==0           
     end            
     if simpleNuber==true
         simple<<number

@@ -2,9 +2,8 @@
 
 # Find the sum of all the multiples of 3 or 5 below 1000.
 a=0
-for i in 0...1000
-    if (i%3==0 || i%5==0) && i!=0
-      a=a+i
-    end    
+(1..1000).each do |i|
+  a+=i if (i%3==0 || i%5==0) && i!=0
+      
 end 
 puts a

@@ -2,7 +2,6 @@
 
 # What is the largest prime factor of the number 600851475143 ?
 require 'prime'
-
 n = 600851475143
 answer=[]
 Prime.each do |prime|

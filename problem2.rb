@@ -4,16 +4,11 @@
 
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 def fibonacci(num)
-    if(num<2) 
-        return num
-    else 
-        return fibonacci(num-1)+fibonacci(num-2) 
-    end       
+    return num if(num<2) 
+    fibonacci(num-1)+fibonacci(num-2)    
 end     
 k=0
-for i in 1..30
-    if fibonacci(i)%2==0
-        k+=fibonacci(i)
-    end    
+(1..30).each do |i|
+    k+=fibonacci(i) if fibonacci(i).even? 
 end     
 puts k

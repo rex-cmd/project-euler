@@ -9,19 +9,17 @@ def isPalindrome(num)
         reversed=reversed*10+last_digit#add last digit
         temp=Integer(temp/10)#remove last digit
     end 
-    return num===reversed
+    num===reversed
 end 
  
 def largestPalindrome
     arr = []
-    for i in 100..999 
-        for j in 100..999 
+     (100..999).each do |i|
+         (100..999).each do |j|
             mul=j*i
-            if isPalindrome(mul)
-                 arr<<j*i
-            end    
+            arr<<j*i if isPalindrome(mul) 
         end    
     end    
-    return arr.max 
+    arr.max 
 end    
 puts largestPalindrome

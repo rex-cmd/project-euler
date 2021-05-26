@@ -5,19 +5,14 @@
 BELOW=2000000
 sum=0
 def isPrime(num)
-    for i in 2..(Math.sqrt(num))
-        if num%i==0 
-            return 0
-        end
-
+    (2..(Math.sqrt(num))).each do |i|
+        return 0 if num%i==0 
     end 
     return 1   
 end    
 
-for i in 2..BELOW
-    if isPrime(i)==1
-        sum+=i
-    end    
+(2..BELOW).each do |i|
+    sum+=i if isPrime(i)==1
 end 
 puts 'sum: '
 puts sum
