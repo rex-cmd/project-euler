@@ -6,13 +6,12 @@ posEnd=13
 proMax=0
 
 while posEnd<=numList.length
-    pro=1
-    for i in (numList[posStart...posEnd]).split(//)#slice
-        pro*=i.to_i
-    end    
-    if pro>proMax
-        proMax= pro
-    end    
+    # pro=1
+    # for i in (numList[posStart...posEnd]).split(//)#slice
+    #     pro*=i.to_i
+    # end    
+    pro = ((numList[posStart...posEnd]).split(//)).inject(1){|x,i| x*=i.to_i}
+    proMax= pro if pro>proMax  
     posStart+=1
     posEnd+=1
 end
