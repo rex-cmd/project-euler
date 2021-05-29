@@ -1,4 +1,5 @@
-# What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
+# What is the greatest product of four adjacent numbers
+#  in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
 
 
 arr = [
@@ -29,9 +30,7 @@ def get(arr, y, x)
 end
 
 def solution(arr, k) 
-
   max = 0
-
   dx = [1, 0, 1,-1]
   dy = [0, 1, 1, 1]
 
