@@ -2,14 +2,6 @@
 
 # Find the largest palindrome made from the product of two 3-digit numbers.
 def palindrome?(num)
-    # reversed =0
-    # temp=num
-    # while temp>0
-    #     last_digit=temp%10#extract the last digit
-    #     reversed=reversed*10+last_digit#add last digit
-    #     temp=Integer(temp/10)#remove last digit
-    # end 
-    # num==reversed
     num.to_s.reverse.to_i == num
 end 
  
