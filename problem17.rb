@@ -1,6 +1,12 @@
-#dictionary to store the values
+# If the numbers 1 to 5 are written out in words: one, two, three, four, five, then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
+# If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?
+
+
+# NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance with British usage.
+
+
 xrange=(0..1001)
-#  dic = { xrange.each do i:0}
+
 dic =xrange.inject({}) { |hash, i| hash[i] = 0 ; hash}
 #intial values given manually
 dic[0] = 0#''
@@ -84,5 +90,5 @@ dic[1000] = 11#'one thousand'
 
 #printing the value of each letter digit sum
 
- puts dic.values.inject{|sum, i| sum+i}
+puts dic.values.inject{|sum, i| sum+i}
 
