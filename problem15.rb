@@ -1,9 +1,4 @@
 # How many such routes are there through a 20×20 grid?
 grid_size = 20
-paths = 1
- 
-(0...grid_size).each do |i| 
-    paths *= (2 * gridSize) - i
-    paths /= i + 1
-end
-puts paths
+
+puts (0...grid_size).inject(1){|mem, i| mem * ((2*grid_size)-i)/(i+1)}
