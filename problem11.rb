@@ -25,7 +25,7 @@ arr = [
 ];
 
 def get(arr, y, x) 
-  return arr[y][x] if (0 <= y && y < arr.length && 0 <= x && x < arr[y].length) 
+  return arr[y][x] if ( y.negative? && y < arr.length && 0 <= x && x < arr[y].length) 
   return 0
 end
 
@@ -37,10 +37,7 @@ def solution(arr, k)
 (0...arr.length).each do |y|
     (0...arr[y].length).each do |x|
       (0...4).each do |d|
-        p = 1
-        (0...k).each do |i|
-          p*= get(arr, y + i * dy[d], x + i * dx[d])
-        end
+        p=(0...k).inject(1){|mem, i| mem *= get(arr, y + i * dy[d], x + i * dx[d])}
         max = [p, max].max
       end
     end
