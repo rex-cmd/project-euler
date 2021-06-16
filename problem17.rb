@@ -69,7 +69,7 @@ dic[90] = 6#'ninety'
 #as we have alreay entered the values under
 #20 manually
 (21..100).each do |i|
-	tens = (i/10).to_i*10
+	tens = i/10*10
 	ones = i - tens
 	dic[i]  = dic[tens]+dic[ones]
 end
@@ -90,5 +90,5 @@ dic[1000] = 11#'one thousand'
 
 #printing the value of each letter digit sum
 
-puts dic.values.inject{|sum, i| sum+i}
+puts dic.values.sum
 
