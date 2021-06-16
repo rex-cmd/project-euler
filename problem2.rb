@@ -7,4 +7,4 @@ def fibonacci(num)
     return num if(num<2) 
     fibonacci(num-1)+fibonacci(num-2)    
 end     
-puts x=(1..30).inject(0) { |sum, i| fibonacci(i).even?  ?  sum+=fibonacci(i) : fibonacci(i) }
+puts (1..30).inject(0) { |sum, i| fibonacci(i).even?  ?  sum+=fibonacci(i) : fibonacci(i) }
