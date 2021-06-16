@@ -7,8 +7,4 @@ def fibonacci(num)
     return num if(num<2) 
     fibonacci(num-1)+fibonacci(num-2)    
 end     
-k=0
-(1..30).each do |i|
-    k+=fibonacci(i) if fibonacci(i).even? 
-end     
-puts k
+puts (1..30).inject(0) { |sum, i| fibonacci(i).even?  ?  sum+=fibonacci(i) : fibonacci(i) }
