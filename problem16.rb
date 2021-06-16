@@ -2,12 +2,5 @@
 
 # What is the sum of the digits of the number 2**1000?
 
-result = 0
- 
-number =2**1000
- 
-while (number > 0) 
-    result += number % 10
-    number /= 10
-end
-puts result
+
+puts number.to_s.chars.map(&:to_i).sum.to_i
